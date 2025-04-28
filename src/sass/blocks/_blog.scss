@@ -1,0 +1,105 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.blog {
+    padding-top: 50px;
+
+    &__wrapper {
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    h3 {
+        text-align: left;
+    }
+
+    &__card {
+        box-shadow: 5px 5px 10px 0px #00000040;
+        background: $light;
+        border: 1px solid $dark;
+    }
+
+    &__data {
+        &-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            padding: 25px 25px 0 25px;
+        }
+    }
+
+    &__text {
+        margin-top: 25px;
+        padding: 0 25px 25px 25px;
+        color: $dark;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+
+    &__img {
+        max-inline-size: calc(100% + 2px);
+        transform: translateX(-1px) translateY(-1px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .blog {
+        &__wrapper {
+            padding: 25px 25px 0 25px;
+            position: relative;
+            @include angle-decoration;
+        }
+
+        &__text {
+            margin-top: 15px;
+        }
+
+        &__data {
+            &-column {
+                gap: 0;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .blog {
+        &__wrapper {
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        &__card {
+            width: 520px;
+            min-height: 375px;
+        }
+
+        &__img {
+            height: 240px;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .blog {
+        padding-top: 40px;
+
+        &__wrapper {
+            align-items: stretch;
+        }
+
+        &__title {
+            margin-top: 100px;
+        }
+
+        &__card {
+            width: 670px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@use '/src/sass/libs/modern-normalize.min.css';
+@use '/src/sass/libs/fontello.css';
+@use '/src/sass/base/variables';
+@use '/src/sass/base/basic';
+
+@use '/src/sass/blocks/header';
+@use '/src/sass/blocks/footer';
+
+@use '/src/sass/blocks/promo';
+@use '/src/sass/blocks/activities';
+@use '/src/sass/blocks/touch';
+@use '/src/sass/blocks/works';
+@use '/src/sass/blocks/catalog';
+@use '/src/sass/blocks/blog';
+@use '/src/sass/blocks/about';
+@use '/src/sass/blocks/findus';
+
+@use '/src/sass/ui/titles';
+@use '/src/sass/ui/buttons';
