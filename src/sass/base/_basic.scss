@@ -62,7 +62,11 @@ body {
     position: relative;
 }
 
-.check-block {
+.just-validate-error-label {
+    margin-top: 8px;
+}
+
+.input .check-block {
     display: flex;
     align-items: center;
     margin-top: 20px;

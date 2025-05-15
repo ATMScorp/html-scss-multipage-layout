@@ -3,6 +3,18 @@
 .touch {
     padding-top: 60px;
 
+    .just-validate-error-field {
+        border: none;
+        outline: 1px solid $ui-error;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+        -webkit-text-fill-color: $dark;
+        -webkit-box-shadow: 0 0 0px 40rem #fff inset;
+    }
+
     &__wrapper {
         margin-top: 60px;
     }
@@ -43,6 +55,11 @@
             outline: 1px solid $dark;
         }
 
+        &:hover {
+            border: none;
+            outline: 1px solid $dark;
+        }
+
         &::placeholder {
             color: $ui-disabled;
             font-size: 14px;
@@ -60,6 +77,11 @@
         resize: none;
 
         &:focus {
+            border: none;
+            outline: 1px solid $dark;
+        }
+
+        &:hover {
             border: none;
             outline: 1px solid $dark;
         }
