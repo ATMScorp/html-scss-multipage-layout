@@ -2,7 +2,7 @@
 
 .works {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 35px;
 
     &__slider {
         margin-top: 40px;
@@ -12,8 +12,9 @@
         width: 100%;
     }
 
-    &__slider-nav {
+    .works__slider-nav {
         display: none;
+        cursor: pointer;
     }
 
     .swiper-pagination {
@@ -21,9 +22,9 @@
     }
 
     .swiper-pagination-bullet {
-        background-color: $dark;
         width: 10px;
         height: 10px;
+        background-color: $dark;
         border-radius: 0%;
         opacity: 1;
         -webkit-tap-highlight-color: transparent;
@@ -36,14 +37,14 @@
 
 @media screen and (min-width: 768px) {
     .works {
-        &__slider {
-            margin-top: 45px;
-        }
-
         .swiper-slide img {
             display: block;
             width: 400px;
             margin: 0 auto;
+        }
+
+        &__slider {
+            margin-top: 45px;
         }
     }
 }
@@ -67,17 +68,17 @@
             bottom: -30px;
         }
 
-        &__slider-nav {
+        .works__slider-nav {
             position: absolute;
             top: 50%;
+            transform: translateY(-50%);
             display: block;
             font-size: 21px;
             background-color: transparent;
             border: none;
             padding: 0;
-            transform: translateY(-50%);
 
-            &::before {
+            &:before {
                 width: auto;
                 margin: 0;
             }
@@ -95,7 +96,7 @@
 
 @media screen and (min-width: 1920px) {
     .works {
-        padding-bottom: 100px;
+        padding-top: 100px;
 
         &__slider {
             margin: 80px 85px 0 85px;

@@ -20,7 +20,7 @@
 
 <body>
 
-    <section class="promo">
+    <section class="promo" id="up">
         <img src="/src/img/promo/potter.jpg" alt="potter" class="promo__potter">
         <div class="container">
             <div class="header">
@@ -148,18 +148,29 @@
     <section class="works">
         <div class="container">
             <h2 class="title-h2">check out our works</h2>
+
             <div class="works__wrapper">
                 <div class="swiper works__slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="/src/img/works/works1.jpg" alt="tea1"></div>
-                        <div class="swiper-slide"><img src="/src/img/works/works2.jpg" alt="tea2"></div>
-                        <div class="swiper-slide"><img src="/src/img/works/works3.jpg" alt="tea3"></div>
+                        <div class="swiper-slide">
+                            <img src="/src/img/works/works1.jpg" alt="tea-1" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/src/img/works/works2.jpg" alt="tea-2" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/src/img/works/works3.jpg" alt="tea-3" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/src/img/works/works1.jpg" alt="tea-2" />
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <button class="icon-left-open works__slider-nav"></button>
                 <button class="icon-right-open works__slider-nav"></button>
             </div>
+        </div>
     </section>
 
     <footer class="footer footer_spaced">
@@ -234,6 +245,10 @@
             <div class="footer__copyright">© Copyright 2025, Ceramic soul</div>
         </div>
     </footer>
+
+    <a href="#up" class="page-up">
+        <img src="/src/icons/page-up.svg" alt="page-up">
+    </a>
 
     <script type="module" src="/src/js/script.js"></script>
 </body>

@@ -108,6 +108,18 @@ try {
             }
         ], {
             errorsContainer: document.querySelector('#checkbox').parentElement.parentElement.querySelector('.checkbox-error-message'),
+        })
+        .onSuccess((event) => {
+            const form = event.currentTarget;
+            const formData = new FormData(form);
+
+            fetch('https://httpbin.org/post', {
+                method: "POST",
+                body: formData,
+            }).then(res => res.json()).then(data => {
+                console.log('Success', data);
+                form.reset();
+            });
         });
 } catch (e) { }
 
@@ -145,3 +157,34 @@ try {
             }
         );
 } catch (e) { }
+
+// Show/hide "page-up" button on scroll with smooth effect
+const pageUp = document.querySelector('.page-up');
+
+function togglePageUpVisibility() {
+    if (window.scrollY > 800) {
+        pageUp.classList.add('visible');
+    } else {
+        pageUp.classList.remove('visible');
+    }
+}
+
+window.addEventListener('load', togglePageUpVisibility);
+window.addEventListener('scroll', togglePageUpVisibility);
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            e.preventDefault();
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+            history.pushState(null, null, targetId);
+        }
+    });
+});
